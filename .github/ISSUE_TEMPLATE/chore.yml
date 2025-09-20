@@ -1,0 +1,95 @@
+name: Chore/Infrastructure Task
+description: Infrastructure improvements, refactoring, or maintenance tasks
+title: "[CHORE] "
+labels: ["chore"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for infrastructure improvements, refactoring, maintenance tasks, or other technical debt items.
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Task Type
+      description: What type of chore is this?
+      options:
+        - Infrastructure (CI/CD, deployment, monitoring)
+        - Refactoring (Code cleanup, restructuring)
+        - Dependencies (Updates, security patches)
+        - Documentation (Technical docs, code comments)
+        - Testing (Test improvements, test coverage)
+        - Performance (Optimization, caching)
+        - Security (Security improvements, audits)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to be done and why?
+      placeholder: |
+        Describe the task or improvement needed:
+        - What is the current state?
+        - What needs to be changed or improved?
+        - Why is this important?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope-of-work
+    attributes:
+      label: Scope of Work
+      description: What specific work needs to be completed?
+      placeholder: |
+        Break down the work into specific tasks:
+        - [ ] Task 1
+        - [ ] Task 2
+        - [ ] Task 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success Criteria
+      description: How will we know this task is complete?
+      placeholder: |
+        Define measurable criteria for completion:
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this task?
+      options:
+        - P0 (Critical - Blocking or security issue)
+        - P1 (High - Should be done soon)
+        - P2 (Medium - Nice to have)
+        - P3 (Low - Future consideration)
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact and Benefits
+      description: What impact will this have on the system or team?
+      placeholder: |
+        Describe the expected benefits:
+        - Performance improvements
+        - Maintenance benefits
+        - Security improvements
+        - Developer experience improvements
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any other relevant information
+      placeholder: Links to related issues, documentation, or other context

@@ -1,0 +1,27 @@
+# Global Owners
+# These owners will be the default owners for everything in the repo.
+# Unless a later match takes precedence, these owners will be requested for
+# review when someone opens a pull request.
+* @BOUTCHOUANG1 @github-copilot
+
+# Java source code
+*.java @BOUTCHOUANG1
+
+# Configuration files
+*.yml @BOUTCHOUANG1
+*.yaml @BOUTCHOUANG1
+*.properties @BOUTCHOUANG1
+*.xml @BOUTCHOUANG1
+
+# Database migrations
+/src/main/resources/db/ @BOUTCHOUANG1
+
+# Documentation
+*.md @BOUTCHOUANG1
+/docs/ @BOUTCHOUANG1
+
+# CI/CD workflows
+/.github/ @BOUTCHOUANG1
+
+# Security related files
+/src/main/java/com/nathan/university_gms/security/ @BOUTCHOUANG1

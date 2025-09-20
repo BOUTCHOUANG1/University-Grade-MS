@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and Discussions
+    url: https://github.com/BOUTCHOUANG1/University-Grade-MS/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: Documentation
+    url: https://github.com/BOUTCHOUANG1/University-Grade-MS/wiki
+    about: Check the documentation for help and guides

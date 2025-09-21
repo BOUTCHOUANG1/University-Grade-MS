@@ -32,7 +32,11 @@
 
 ## Related Issues
 <!-- Link to related issues using keywords: Closes #123, Fixes #456, Resolves #789 -->
-Closes #
+Closes #<!-- ISSUE_ID -->
+
+## Screenshots
+<!-- If applicable, add screenshots to help explain your changes -->
 
 ## Additional Notes
-<!-- Any additional information that reviewers should know -->
+<!-- Any additional information that would be helpful for reviewers -->
+

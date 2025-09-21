@@ -1,13 +1,18 @@
 name: Bug Report
-description: Report a bug or unexpected behavior
+description: Report a bug or issue with the University Grade Management System
 title: "[BUG] "
-labels: ["type: bug", "P2"]
-projects: ["BOUTCHOUANG1/2"]
+labels: ["type: bug", "P2", "status:triage"]
+projects: ["BOUTCHOUANG1/1"]
+# Note: Update project number if different. To find: Projects → Backend Roadmap → Settings → Check URL
+assignees:
+  - BOUTCHOUANG1
+
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report! Please provide as much detail as possible.
+
 
   - type: textarea
     id: description
@@ -15,6 +20,44 @@ body:
       label: Bug Description
       description: A clear and concise description of what the bug is.
       placeholder: Describe the bug...
+
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: A brief summary of the bug
+      placeholder: "Brief description of what went wrong"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - "Critical - System unusable/security issue"
+        - "High - Major feature broken"
+        - "Medium - Minor feature issue"
+        - "Low - Cosmetic/minor issue"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area Affected
+      description: Which area of the system is affected?
+      options:
+        - "Authentication/Authorization"
+        - "Database/Data Management"
+        - "Grade Management"
+        - "User Interface"
+        - "API/Backend"
+        - "Reports/Analytics"
+        - "Email/Notifications"
+        - "Infrastructure/CI/CD"
+        - "Other"
     validations:
       required: true
 
@@ -24,6 +67,8 @@ body:
       label: Expected Behavior
       description: A clear and concise description of what you expected to happen.
       placeholder: What should have happened?
+      description: What did you expect to happen?
+      placeholder: "Describe what should have happened"
     validations:
       required: true
 
@@ -33,6 +78,8 @@ body:
       label: Actual Behavior
       description: A clear and concise description of what actually happened.
       placeholder: What actually happened?
+      description: What actually happened?
+      placeholder: "Describe what actually happened"
     validations:
       required: true
 
@@ -45,6 +92,11 @@ body:
         1. Go to '...'
         2. Click on '....'
         3. Scroll down to '....'
+      description: How can we reproduce this bug?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
         4. See error
     validations:
       required: true
@@ -74,6 +126,14 @@ body:
         - Java Version: [e.g., 17.0.1]
     validations:
       required: false
+      description: Please provide environment details
+      placeholder: |
+        - OS: [e.g. Windows 10, macOS, Ubuntu]
+        - Browser: [e.g. Chrome, Firefox, Safari]
+        - Version: [e.g. 1.0.0]
+        - Java Version: [e.g. 17, 21]
+        - Database: [e.g. PostgreSQL 15]
+
 
   - type: textarea
     id: logs
@@ -83,6 +143,8 @@ body:
       placeholder: Paste logs or drag and drop screenshots here...
     validations:
       required: false
+      description: Please include any relevant error logs or screenshots
+      placeholder: "Paste error logs or describe any visual issues"
 
   - type: textarea
     id: additional
@@ -91,3 +153,5 @@ body:
       description: Add any other context about the problem here.
     validations:
       required: false
+      description: Add any other context about the problem here
+      placeholder: "Any additional information that might be helpful"

@@ -1,13 +1,70 @@
 name: Feature Request
-description: Suggest a new feature or enhancement
+description: Suggest a new feature or enhancement for the University Grade Management System
 title: "[FEATURE] "
-labels: ["type: feature", "P3"]
-projects: ["BOUTCHOUANG1/2"]
+labels: ["type:feature","P3", "status:triage"]
+projects: ["BOUTCHOUANG1/1"]
+# Note: Update project number if different. To find: Projects → Backend Roadmap → Settings → Check URL
+assignees:
+  - BOUTCHOUANG1
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to suggest a new feature! Please provide as much detail as possible.
+        Thanks for suggesting a new feature! Please provide as much detail as possible to help us understand your request.
+
+  - type: input
+    id: feature-title
+    attributes:
+      label: Feature Title
+      description: A brief title for the feature
+      placeholder: "Short descriptive title for the feature"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature Area
+      description: Which area of the system would this feature affect?
+      options:
+        - "Authentication/Authorization"
+        - "Database/Data Management"
+        - "Grade Management"
+        - "User Interface"
+        - "API/Backend"
+        - "Reports/Analytics"
+        - "Email/Notifications"
+        - "Infrastructure/CI/CD"
+        - "Documentation"
+        - "Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature?
+      options:
+        - "P0 - Critical/Urgent"
+        - "P1 - High priority"
+        - "P2 - Medium priority"
+        - "P3 - Low priority/Nice to have"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Estimated Size
+      description: How complex do you think this feature would be to implement?
+      options:
+        - "S - Small (1-2 days)"
+        - "M - Medium (3-5 days)"
+        - "L - Large (1+ weeks)"
+        - "Unknown"
+    validations:
+      required: true
 
   - type: textarea
     id: problem

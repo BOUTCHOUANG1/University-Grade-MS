@@ -33,7 +33,7 @@ This directory contains professional development workflow templates and configur
 - **Bug Report**: Structured bug reporting with severity levels
 - **Feature Request**: Complete feature specification with acceptance criteria
 - **Chore**: Infrastructure and maintenance task tracking
-- All templates auto-assign to "Backend Roadmap" project (ID: 2)
+- All templates auto-assign to "Backend Roadmap" project (ID: 1)
 
 ### ✅ Code Ownership
 - Global ownership by @BOUTCHOUANG1
@@ -56,7 +56,7 @@ Comprehensive branch protection strategy:
 
 ### ✅ CI/CD Pipeline
 Basic CI workflow including:
-- Java 17 build and test automation
+- Java 21 build and test automation
 - Maven dependency caching
 - Security vulnerability scanning
 - Test reporting integration
@@ -80,7 +80,7 @@ gh label create "type: bug" --color "d73a4a" --description "Something isn't work
 ```
 
 ### 3. Project Board Integration
-- Verify "Backend Roadmap" project exists (ID: 2)
+- Verify "Backend Roadmap" project exists (ID: 1)
 - Configure project views as outlined in PROJECT_INTEGRATION.md
 - Test issue template → project integration
 

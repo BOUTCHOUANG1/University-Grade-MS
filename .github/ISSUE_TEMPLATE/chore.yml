@@ -1,0 +1,107 @@
+name: 🔧 Chore
+description: Infrastructure, refactoring, or maintenance tasks for the University Grade Management System
+title: "[Chore]: "
+labels: ["chore", "maintenance"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to the maintenance and improvement of our codebase!
+
+  - type: dropdown
+    id: chore-type
+    attributes:
+      label: Type of Chore
+      description: What type of maintenance task is this?
+      options:
+        - Infrastructure (CI/CD, deployment, tooling)
+        - Refactoring (code structure, organization)
+        - Dependencies (updates, security patches)
+        - Documentation (technical docs, code comments)
+        - Testing (test improvements, coverage)
+        - Performance (optimization, monitoring)
+        - Security (vulnerability fixes, hardening)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the maintenance task or improvement.
+      placeholder: |
+        What needs to be done and why?
+        
+        Current state: [describe current situation]
+        Desired state: [describe what should be improved]
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why is this chore necessary? What problems does it solve?
+      placeholder: |
+        This task is important because:
+        - [reason 1]
+        - [reason 2]
+        - [reason 3]
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope of Work
+      description: What components, files, or areas of the system will be affected?
+      placeholder: |
+        Areas affected:
+        - [component/file 1]
+        - [component/file 2]
+        - [component/file 3]
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this chore is complete?
+      placeholder: |
+        - [ ] Task 1 is completed
+        - [ ] Task 2 is completed
+        - [ ] All tests pass
+        - [ ] Documentation is updated
+        - [ ] No breaking changes introduced
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      description: How urgent is this maintenance task?
+      options:
+        - High (Blocking development or causing issues)
+        - Medium (Should be done soon)
+        - Low (Can be done when time permits)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any additional context, dependencies, or considerations.
+      placeholder: |
+        Dependencies or prerequisites:
+        - [dependency 1]
+        - [dependency 2]
+        
+        Potential risks or concerns:
+        - [risk 1]
+        - [risk 2]
+    validations:
+      required: false

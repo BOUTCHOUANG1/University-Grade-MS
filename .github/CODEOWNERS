@@ -1,0 +1,13 @@
+# CODEOWNERS file for University Grade Management System
+# This file defines who should be automatically requested for review
+# when a pull request touches certain files or directories.
+
+# Global rule - all files require review from the repository owner
+* @BOUTCHOUANG1
+
+# Optional: You can add more specific rules as the project grows
+# Examples:
+# /src/main/java/com/nathan/university_gms/security/ @BOUTCHOUANG1
+# /docs/ @BOUTCHOUANG1
+# *.md @BOUTCHOUANG1
+# pom.xml @BOUTCHOUANG1

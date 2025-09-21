@@ -1,0 +1,161 @@
+name: Chore/Maintenance
+description: Infrastructure, refactoring, documentation, or maintenance tasks
+title: "[CHORE] "
+labels: ["type:chore", "status:triage"]
+projects: ["BOUTCHOUANG1/1"]
+# Note: Update project number if different. To find: Projects → Backend Roadmap → Settings → Check URL
+assignees:
+  - BOUTCHOUANG1
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for infrastructure improvements, refactoring, documentation updates, dependency updates, or other maintenance tasks.
+
+  - type: input
+    id: task-title
+    attributes:
+      label: Task Title
+      description: A brief title for the maintenance task
+      placeholder: "Short descriptive title for the task"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: chore-type
+    attributes:
+      label: Type of Chore
+      description: What type of maintenance task is this?
+      options:
+        - "Documentation update"
+        - "Code refactoring"
+        - "Dependency update"
+        - "Infrastructure/DevOps"
+        - "CI/CD improvements"
+        - "Database maintenance"
+        - "Security update"
+        - "Performance optimization"
+        - "Code cleanup"
+        - "Configuration update"
+        - "Testing improvements"
+        - "Other maintenance"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area Affected
+      description: Which area of the system does this affect?
+      options:
+        - "Authentication/Authorization"
+        - "Database/Data Management"
+        - "Grade Management"
+        - "User Interface"
+        - "API/Backend"
+        - "Reports/Analytics"
+        - "Email/Notifications"
+        - "Infrastructure/CI/CD"
+        - "Documentation"
+        - "Testing"
+        - "Build/Deployment"
+        - "Dependencies"
+        - "Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this maintenance task?
+      options:
+        - "P0 - Critical/Security issue"
+        - "P1 - High priority"
+        - "P2 - Medium priority"
+        - "P3 - Low priority"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Estimated Size
+      description: How much effort do you estimate this task will require?
+      options:
+        - "S - Small (1-2 hours)"
+        - "M - Medium (1-2 days)"
+        - "L - Large (3+ days)"
+        - "Unknown"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: Describe what needs to be done and why
+      placeholder: "Provide a detailed description of the maintenance task"
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation/Benefits
+      description: Why is this task important? What benefits will it provide?
+      placeholder: "Explain the motivation and expected benefits"
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope of Work
+      description: What specific changes or updates will be made?
+      placeholder: |
+        - [ ] Task 1
+        - [ ] Task 2
+        - [ ] Task 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know when this task is complete?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks/Considerations
+      description: Are there any risks or special considerations for this task?
+      placeholder: "Potential risks, breaking changes, dependencies, etc."
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing Strategy
+      description: How will you verify that the changes work correctly?
+      placeholder: "Describe how you'll test the changes"
+
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Rollback Plan
+      description: If applicable, describe how to rollback these changes
+      placeholder: "Steps to revert changes if needed"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: "Links to documentation, related issues, etc."

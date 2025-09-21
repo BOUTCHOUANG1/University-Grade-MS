@@ -1,0 +1,110 @@
+name: Bug Report
+description: Report a bug or issue with the University Grade Management System
+title: "[BUG] "
+labels: ["type:bug", "status:triage"]
+projects: ["BOUTCHOUANG1/1"]
+# Note: Update project number if different. To find: Projects → Backend Roadmap → Settings → Check URL
+assignees:
+  - BOUTCHOUANG1
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! Please provide as much detail as possible.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: A brief summary of the bug
+      placeholder: "Brief description of what went wrong"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - "Critical - System unusable/security issue"
+        - "High - Major feature broken"
+        - "Medium - Minor feature issue"
+        - "Low - Cosmetic/minor issue"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area Affected
+      description: Which area of the system is affected?
+      options:
+        - "Authentication/Authorization"
+        - "Database/Data Management"
+        - "Grade Management"
+        - "User Interface"
+        - "API/Backend"
+        - "Reports/Analytics"
+        - "Email/Notifications"
+        - "Infrastructure/CI/CD"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "Describe what should have happened"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: "Describe what actually happened"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this bug?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Please provide environment details
+      placeholder: |
+        - OS: [e.g. Windows 10, macOS, Ubuntu]
+        - Browser: [e.g. Chrome, Firefox, Safari]
+        - Version: [e.g. 1.0.0]
+        - Java Version: [e.g. 17, 21]
+        - Database: [e.g. PostgreSQL 15]
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Logs/Screenshots
+      description: Please include any relevant error logs or screenshots
+      placeholder: "Paste error logs or describe any visual issues"
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here
+      placeholder: "Any additional information that might be helpful"

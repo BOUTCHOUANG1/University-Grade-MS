@@ -1,0 +1,27 @@
+# Global code ownership
+# All files in the repository require review from the repository owner
+* @BOUTCHOUANG1
+
+# Specific ownership for critical areas
+# Database migrations and schema changes
+src/main/resources/db/ @BOUTCHOUANG1
+*.sql @BOUTCHOUANG1
+
+# Security and authentication related code
+src/main/java/com/nathan/university_gms/security/ @BOUTCHOUANG1
+src/main/java/com/nathan/university_gms/auth/ @BOUTCHOUANG1
+
+# Configuration files
+*.yml @BOUTCHOUANG1
+*.yaml @BOUTCHOUANG1
+*.properties @BOUTCHOUANG1
+pom.xml @BOUTCHOUANG1
+
+# CI/CD and DevOps
+.github/ @BOUTCHOUANG1
+Dockerfile @BOUTCHOUANG1
+docker-compose.yml @BOUTCHOUANG1
+
+# Documentation
+*.md @BOUTCHOUANG1
+docs/ @BOUTCHOUANG1

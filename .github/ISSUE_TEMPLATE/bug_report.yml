@@ -1,16 +1,25 @@
 name: Bug Report
 description: Report a bug or issue with the University Grade Management System
 title: "[BUG] "
-labels: ["type:bug", "status:triage"]
+labels: ["type: bug", "P2", "status:triage"]
 projects: ["BOUTCHOUANG1/1"]
 # Note: Update project number if different. To find: Projects → Backend Roadmap → Settings → Check URL
 assignees:
   - BOUTCHOUANG1
+
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report! Please provide as much detail as possible.
+
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe the bug...
 
   - type: input
     id: summary
@@ -56,6 +65,8 @@ body:
     id: expected
     attributes:
       label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+      placeholder: What should have happened?
       description: What did you expect to happen?
       placeholder: "Describe what should have happened"
     validations:
@@ -65,6 +76,8 @@ body:
     id: actual
     attributes:
       label: Actual Behavior
+      description: A clear and concise description of what actually happened.
+      placeholder: What actually happened?
       description: What actually happened?
       placeholder: "Describe what actually happened"
     validations:
@@ -74,6 +87,11 @@ body:
     id: steps
     attributes:
       label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
       description: How can we reproduce this bug?
       placeholder: |
         1. Go to '...'
@@ -83,10 +101,31 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - Critical (System down, data loss)
+        - High (Major functionality broken)
+        - Medium (Feature partially broken)
+        - Low (Minor issue, workaround exists)
+    validations:
+      required: true
+
   - type: textarea
     id: environment
     attributes:
       label: Environment
+      description: Information about your environment
+      placeholder: |
+        - OS: [e.g., Windows 10, macOS Big Sur, Ubuntu 20.04]
+        - Browser: [e.g., Chrome 95, Firefox 94, Safari 15]
+        - Application Version: [e.g., 1.0.0]
+        - Java Version: [e.g., 17.0.1]
+    validations:
+      required: false
       description: Please provide environment details
       placeholder: |
         - OS: [e.g. Windows 10, macOS, Ubuntu]
@@ -95,10 +134,15 @@ body:
         - Java Version: [e.g. 17, 21]
         - Database: [e.g. PostgreSQL 15]
 
+
   - type: textarea
     id: logs
     attributes:
       label: Error Logs/Screenshots
+      description: If applicable, add logs or screenshots to help explain your problem.
+      placeholder: Paste logs or drag and drop screenshots here...
+    validations:
+      required: false
       description: Please include any relevant error logs or screenshots
       placeholder: "Paste error logs or describe any visual issues"
 
@@ -106,5 +150,8 @@ body:
     id: additional
     attributes:
       label: Additional Context
+      description: Add any other context about the problem here.
+    validations:
+      required: false
       description: Add any other context about the problem here
       placeholder: "Any additional information that might be helpful"

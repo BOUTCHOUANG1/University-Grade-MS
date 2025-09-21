@@ -1,7 +1,7 @@
 name: Chore/Maintenance
 description: Infrastructure, refactoring, documentation, or maintenance tasks
 title: "[CHORE] "
-labels: ["type:chore", "status:triage"]
+labels: ["type:chore","P3", "status:triage"]
 projects: ["BOUTCHOUANG1/1"]
 # Note: Update project number if different. To find: Projects → Backend Roadmap → Settings → Check URL
 assignees:
@@ -10,6 +10,14 @@ body:
   - type: markdown
     attributes:
       value: |
+        Use this template for infrastructure improvements, code refactoring, maintenance tasks, or other technical work.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: Describe what needs to be done and why.
+      placeholder: What is this task about? Why is it needed?
         Use this template for infrastructure improvements, refactoring, documentation updates, dependency updates, or other maintenance tasks.
 
   - type: input
@@ -22,6 +30,23 @@ body:
       required: true
 
   - type: dropdown
+    id: type
+    attributes:
+      label: Task Type
+      description: What type of task is this?
+      options:
+        - Refactoring (code improvement without changing functionality)
+        - Infrastructure (deployment, CI/CD, environment setup)
+        - Dependencies (update libraries, frameworks)
+        - Performance (optimization, monitoring)
+        - Security (vulnerability fixes, security improvements)
+        - Documentation (code docs, README updates)
+        - Testing (test coverage, test improvements)
+        - Tooling (development tools, build process)
+        - Technical Debt (addressing code debt)
+        - Configuration (settings, environment configs)
+        - Other
+        
     id: chore-type
     attributes:
       label: Type of Chore
@@ -45,6 +70,22 @@ body:
   - type: dropdown
     id: area
     attributes:
+      label: Area
+      description: Which area of the system does this task relate to?
+      options:
+        - Authentication & Authorization
+        - Database & Data Management
+        - Grades & Academic Records
+        - Infrastructure & DevOps
+        - CI/CD Pipeline
+        - Reports & Analytics
+        - API & Backend
+        - Frontend & UI
+        - Security
+        - Testing
+        - Documentation
+        - Build System
+        - Other
       label: Area Affected
       description: Which area of the system does this affect?
       options:
@@ -68,6 +109,12 @@ body:
     id: priority
     attributes:
       label: Priority
+      description: How urgent is this task?
+      options:
+        - P0 (Critical - blocking other work)
+        - P1 (High - should be done soon)
+        - P2 (Medium - normal priority)
+        - P3 (Low - when time permits)
       description: How urgent is this maintenance task?
       options:
         - "P0 - Critical/Security issue"
@@ -91,6 +138,13 @@ body:
       required: true
 
   - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define what needs to be completed for this task to be considered done.
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2  
     id: description
     attributes:
       label: Task Description
@@ -133,6 +187,30 @@ body:
       required: true
 
   - type: textarea
+    id: technical_details
+    attributes:
+      label: Technical Details
+      description: Any technical considerations, approaches, or constraints.
+      placeholder: Implementation details, dependencies, technical constraints...
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact Assessment
+      description: What is the expected impact of this task?
+      placeholder: Performance improvements, reduced technical debt, better maintainability...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context or information about this task.
+    validations:
+      required: false
     id: risks
     attributes:
       label: Risks/Considerations

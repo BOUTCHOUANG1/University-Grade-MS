@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 📖 Documentation
+  - name: 📚 Documentation
     url: https://github.com/BOUTCHOUANG1/University-Grade-MS/wiki
-    about: Check the project documentation and wiki for guidance
+    about: Check the project wiki for documentation and guides
   - name: 💬 Discussions
     url: https://github.com/BOUTCHOUANG1/University-Grade-MS/discussions
     about: Ask questions and discuss ideas with the community

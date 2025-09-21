@@ -1,7 +1,7 @@
 name: Feature Request
 description: Suggest a new feature or enhancement for the University Grade Management System
 title: "[FEATURE] "
-labels: ["type:feature", "status:triage"]
+labels: ["type:feature","P3", "status:triage"]
 projects: ["BOUTCHOUANG1/1"]
 # Note: Update project number if different. To find: Projects → Backend Roadmap → Settings → Check URL
 assignees:
@@ -70,8 +70,8 @@ body:
     id: problem
     attributes:
       label: Problem Statement
-      description: What problem does this feature solve? What is the current limitation?
-      placeholder: "Describe the problem or limitation this feature would address"
+      description: Describe the problem you're trying to solve or the need this feature addresses.
+      placeholder: What problem does this feature solve? Why is it needed?
     validations:
       required: true
 
@@ -79,8 +79,8 @@ body:
     id: solution
     attributes:
       label: Proposed Solution
-      description: Describe your proposed solution in detail
-      placeholder: "Describe how you envision this feature working"
+      description: Describe the solution you'd like to see implemented.
+      placeholder: How should this feature work? What should it do?
     validations:
       required: true
 
@@ -88,50 +88,77 @@ body:
     id: alternatives
     attributes:
       label: Alternative Solutions
-      description: Have you considered any alternative approaches?
-      placeholder: "Describe any alternative solutions you've considered"
+      description: Describe any alternative solutions or features you've considered.
+      placeholder: Have you considered any other approaches?
+    validations:
+      required: false
 
   - type: textarea
-    id: acceptance-criteria
+    id: acceptance_criteria
     attributes:
       label: Acceptance Criteria
-      description: What specific criteria must be met for this feature to be considered complete?
+      description: Define what needs to be true for this feature to be considered complete.
       placeholder: |
         - [ ] Criterion 1
-        - [ ] Criterion 2
+        - [ ] Criterion 2  
         - [ ] Criterion 3
     validations:
       required: true
 
-  - type: textarea
-    id: user-stories
+  - type: dropdown
+    id: priority
     attributes:
-      label: User Stories
-      description: Describe how different users would interact with this feature
-      placeholder: |
-        As a [user type], I want [functionality] so that [benefit/value]
-        
-        Example:
-        - As a student, I want to view my grade trends over time so that I can track my academic progress
-        - As a teacher, I want to bulk upload grades from a CSV file so that I can save time on data entry
+      label: Priority
+      description: How important is this feature?
+      options:
+        - P0 (Critical - needed immediately)
+        - P1 (High - needed soon)
+        - P2 (Medium - nice to have)
+        - P3 (Low - future consideration)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which area of the system does this feature relate to?
+      options:
+        - Authentication & Authorization
+        - Database & Data Management
+        - Grades & Academic Records
+        - Infrastructure & DevOps
+        - Reports & Analytics
+        - User Interface
+        - API & Integration
+        - Security
+        - Performance
+        - Other
+    validations:
+      required: true
 
   - type: textarea
     id: mockups
     attributes:
       label: Mockups/Wireframes
-      description: If you have any mockups, wireframes, or visual examples, please include them here
-      placeholder: "Attach images or describe the visual design"
+      description: If applicable, add mockups, wireframes, or examples to help explain your feature request.
+      placeholder: Drag and drop images here or describe the UI/UX...
+    validations:
+      required: false
 
   - type: textarea
-    id: technical-considerations
+    id: technical_notes
     attributes:
-      label: Technical Considerations
-      description: Are there any technical aspects, dependencies, or constraints to consider?
-      placeholder: "Database changes, API changes, security considerations, performance impact, etc."
+      label: Technical Notes
+      description: Any technical considerations, constraints, or implementation notes.
+      placeholder: Technical details, dependencies, potential challenges...
+    validations:
+      required: false
 
   - type: textarea
-    id: additional-context
+    id: additional
     attributes:
       label: Additional Context
-      description: Add any other context, references, or examples
-      placeholder: "Any additional information that would be helpful"
+      description: Add any other context or information about the feature request here.
+    validations:
+      required: false
